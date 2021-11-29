@@ -2,7 +2,9 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
+## test
 
 Some information about you!
 
