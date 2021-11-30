@@ -115,6 +115,14 @@ img {
   max-width: none;
 }
 
+// Code 
+ pre {
+    background-color: #D1D1D0;
+    overflow: auto;
+    font-family: 'Monaco', monospace;
+    padding: 0 1em;
+  }
+
 code {
     font-family: Monaco, monospace;
     font-size: 90%;
