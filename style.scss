@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Ubuntu;
   color: $gray;
   font-weight: bold;
-  text-transform: lowercase;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -245,6 +244,7 @@ nav {
 	a:hover, a:active {
   		color: $white;
   		text-decoration: underline $white;
+        text-transform: lowercase;
     	}
 }
 .posts > .post {
