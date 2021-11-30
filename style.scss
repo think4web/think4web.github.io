@@ -73,10 +73,9 @@ a {
 	cursor: pointer;
   &:hover, &:active {
   	color: $white;
-  	text-decoration: underline $white;
-    // text-underline-position: under;
   }
 }
+
 
 ul, ol {
   margin: 15px 0;
@@ -241,9 +240,15 @@ nav {
 // .main
 //
 
+.post:a{
+&:hover, &:active {
+  	color: $white;
+  	text-decoration: underline $white;
+}
 .posts > .post {
   padding-bottom: 0.5em;
   //border-bottom: 1px solid $dark;
+  
 }
 
 .posts > .post:last-child {
