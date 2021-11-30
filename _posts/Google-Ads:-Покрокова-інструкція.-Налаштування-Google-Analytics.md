@@ -30,3 +30,5 @@ published: false
 ![Google Analytics: Google signals](/images/ga3.png)
 
 У наступному пункті вибираємо період зберігання даних. 
+
+![Період зберігання даних Google Analytics](/images/ga4.png)
