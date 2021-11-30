@@ -144,7 +144,9 @@ code {
     word-break: break-all;
   }
   
-  
+ highlight {
+ 	background-color: $darkGray;
+ } 
 
 .date {
 //  font-style: italic;
