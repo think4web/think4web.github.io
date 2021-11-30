@@ -116,6 +116,7 @@ img {
 }
 
 // Code 
+
  pre {
     background-color: #D1D1D0;
     overflow: auto;
@@ -133,6 +134,17 @@ code {
     word-break: normal;
     border-radius: 5px;
   }
+  
+  pre code {
+    border: none;
+    background: none;
+    font-size: 90%;
+    line-height: 1em;
+    letter-spacing: normal;
+    word-break: break-all;
+  }
+  
+  
 
 .date {
 //  font-style: italic;
