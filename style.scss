@@ -73,7 +73,7 @@ a {
 	cursor: pointer;
   &:hover, &:active {
   	color: $white;
-  	text-decoration: line-through $white;
+  	text-decoration: underline $white;
     // text-underline-position: under;
   }
 }
