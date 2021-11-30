@@ -117,38 +117,14 @@ img {
 
 // Code 
 
- pre {
-    background-color: $darkGray;
-    overflow: auto;
-    font-family: 'Monaco', monospace;
-    padding: 0 1em;
-  }
+.highlight {
+    background: rgb(230, 230, 230);
+    max-height: 300px;
+    overflow: scroll;
+    border: 1px #C1C1C1;
+    border-radius: 3px;
+}
 
-code {
-    font-family: Monaco, monospace;
-    font-size: 90%;
-    line-height: 100%;
-    background-color: $darkGray;
-    padding: 0.2em;
-    letter-spacing: -0.05em;
-    word-break: normal;
-    border-radius: 5px;
-  }
-  
-  pre code {
-    border: none;
-    background: none;
-    font-size: 90%;
-    line-height: 1em;
-    letter-spacing: normal;
-    word-break: break-all;
-  }
-  
- highlight {
- 	background-color: $darkGray;
- }
- 
-highlighter-rouge {}
 
 .date {
 //  font-style: italic;
