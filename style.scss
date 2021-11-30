@@ -240,8 +240,8 @@ nav {
 // .main
 //
 
-a.post {
-&:hover, &:active {
+.post {
+a:hover, a:active {
   	color: $white;
   	text-decoration: underline $white;
     }
