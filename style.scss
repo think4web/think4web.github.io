@@ -241,11 +241,11 @@ nav {
 //
 
 .post {
-	text-transform: capitalize;
 	a:hover, a:active {
   		color: $white;
   		text-decoration: underline $white;
     	}
+   	text-transform: none;
 }
 .posts > .post {
   padding-bottom: 0.5em;
