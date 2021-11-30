@@ -72,6 +72,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
+  	text-decoration: underline wavy $white;
     text-underline-position: under;
     color: $white;
   }
