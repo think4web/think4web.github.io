@@ -26,3 +26,5 @@ published: false
 ## Налаштування ресурсу Google Analytics
 
 Перейдемо в настройки збору даних і включимо настройку для збору даних для персоналізації реклами "Google signal".
+
+![Google Analytics: Google signal](/images/ga3.png)
