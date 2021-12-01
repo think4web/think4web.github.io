@@ -45,18 +45,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 20px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h4 {
@@ -193,8 +193,7 @@ img {
   margin: 0;
   color: $gray;
   cursor: pointer;
-  // font-family: $helveticaNeue;
-  font-family: $text;
+  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -213,8 +212,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  // font-family: $helveticaNeue;
-  font-family: $text;
+  font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
