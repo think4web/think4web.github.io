@@ -4,6 +4,7 @@
 
 # This will require each of these plugins automatically.
 plugins:
+- title
 
 # Name of your site (displayed in the header)
 name: think4web
