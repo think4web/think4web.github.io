@@ -13,7 +13,12 @@ $darkerGray: #222;
 $lightGray: #eee;
 
 // Font stacks
-$text: Opens Sans, sans-serif;
+$text {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    // font-weight: 400;
+    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.ttf) format('ttf');
+}
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
