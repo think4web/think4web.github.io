@@ -1,4 +1,4 @@
-# [think4web.github.io](think4web.github.io)
+# [think4web.github.io](https://think4web.github.io)
 
 **purify.min.js** - скрипт дає можливість підключти коментарі з Fediverse. Поки що його не задіяв.
 
