@@ -54,3 +54,5 @@ published: false
 ![thankyou.page - ціль Google Analytics](/images/ga7.png)
 
 Продовжуємо, вказуємо адресу сторінки і цінність цілі.
+
+![Налаштування конверсій Google Analytics](/images/ga8.png)
