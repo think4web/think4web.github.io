@@ -19,15 +19,15 @@ html {
 
 body {
 	background: $dark;
-  font-family: $text;
-  color: $gray;
+    font-family: $text;
+    color: $gray;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 0 10px;
-  width: 100%;
+	margin: 0 auto;
+    max-width: 900px;
+    padding: 0 10px;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $gray;
   font-weight: bold;
 
-  line-height: 1.7;
+  line-height: 2.7;
   margin: 1em 0 15px;
   padding: 0;
 
