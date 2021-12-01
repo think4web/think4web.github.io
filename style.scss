@@ -19,23 +19,23 @@ html {
 
 body {
 	background: $dark;
-  font: 19px/1.4 Ubuntu;
-  color: $gray;
+    font: 18px/1.4 $helvetica;
+    color: $gray;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 0 10px;
-  width: 100%;
+	margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 10px;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Ubuntu;
+  font-family: $helveticaNeue;
   color: $gray;
   font-weight: bold;
 
-  line-height: 1.7;
+  line-height: 1.5;
   margin: 1em 0 15px;
   padding: 0;
 
@@ -45,22 +45,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 20px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 h4 {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 p {
@@ -150,12 +150,12 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 1px;
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $dark;
+  padding: 5px 5px;
+  border-bottom: 1px solid $white;
 
   @include mobile {
     text-align: center;
@@ -264,7 +264,7 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
+    font-size: 24px;
     font-style: italic;
   }
 
