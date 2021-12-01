@@ -17,7 +17,7 @@ $text {
     font-family: 'Ubuntu';
     font-style: normal;
     // font-weight: 400;
-    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.ttf) format('ttf');
+    src: local('Ubuntu'), url({{ site.baseurl }}/fonts/ubuntu.ttf) format('ttf');
 }
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
