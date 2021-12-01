@@ -7,7 +7,7 @@ published: true
   {% for post in site.posts %}
     <article class="post">
 
-      <a href="{{ post.url }}">{{ post.title | capitalize}} / {{ post.date | date: "%d.%m.%Y" }}</a>
+      <a href="{{ post.url }}">{{ post.title | none}} / {{ post.date | date: "%d.%m.%Y" }}</a>
 
       <!--<div class="entry">
         {{ post.excerpt }}
