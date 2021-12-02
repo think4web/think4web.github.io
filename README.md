@@ -2,6 +2,7 @@
 
 ## TODO
 - add RSS
+- add style for code block
 
 
 - **purify.min.js** - скрипт дає можливість підключти коментарі з Fediverse. Поки що його не задіяв.
