@@ -1,8 +1,11 @@
 # [think4web.github.io](https://think4web.github.io)
+![Created Badge](https://badges.pufler.dev/created/think4web/dotfiles?color=blue)
+![Updated Badge](https://badges.pufler.dev/updated/think4web/dotfiles?color=blue)
+![Visits Badge](https://badges.pufler.dev/visits/think4web/dotfiles?color=blue)
 
 ## TODO
-- add RSS
-- add style for code block
+- [x] Add RSS
+- [ ] Add style for code block
 
 ## Plugins
 
