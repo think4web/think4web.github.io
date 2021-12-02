@@ -32,5 +32,7 @@ GitHub Pages підтримують [наступні плагіни](https://pa
 ```html
 <a href="{{ site.baseurl }}/feed.xml">RSS</a>
 ```
+Все готово, а сам процес налаштування займає кілька хвилин.
+
 ---
 За публікацією [Dzhavat Ushev](https://dzhavat.github.io/2020/01/19/adding-an-rss-feed-to-github-pages.html).
