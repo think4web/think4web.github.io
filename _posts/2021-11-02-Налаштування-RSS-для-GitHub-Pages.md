@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## Підключаємо плагін для генерації фіда
