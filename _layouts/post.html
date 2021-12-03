@@ -4,7 +4,8 @@ published: true
 ---
 
 <article class="post">
-  <h1>{{ page.title | downcase | capitalize }}</h1>
+  <!-- <h1>{{ page.title | downcase | capitalize }}</h1> -->
+  <h1>{{ page.title | markdownify }}</h1>
 
   <div class="entry">
     {{ content }}
