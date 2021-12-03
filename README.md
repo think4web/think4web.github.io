@@ -1,7 +1,7 @@
 # [think4web.github.io](https://think4web.github.io)
-![Created Badge](https://badges.pufler.dev/created/think4web/dotfiles?color=blue)
-![Updated Badge](https://badges.pufler.dev/updated/think4web/dotfiles?color=blue)
-![Visits Badge](https://badges.pufler.dev/visits/think4web/dotfiles?color=blue)
+![Created Badge](https://badges.pufler.dev/created/think4web/think4web.github.io?color=blue)
+![Updated Badge](https://badges.pufler.dev/updated/think4web/think4web.github.io?color=blue)
+![Visits Badge](https://badges.pufler.dev/visits/think4web/think4web.github.io?color=blue)
 
 ## TODO
 - [x] Add RSS
