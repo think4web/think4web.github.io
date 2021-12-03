@@ -1,3 +1,4 @@
 ---
 publised: false
+layout: post
 ---
