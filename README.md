@@ -3,10 +3,11 @@
 ![Updated Badge](https://badges.pufler.dev/updated/think4web/think4web.github.io?color=blue)
 ![Visits Badge](https://badges.pufler.dev/visits/think4web/think4web.github.io?color=blue)
 
-## TODO
-- [x] Add RSS
-- [ ] Add style for code block
-
 ## Plugins
 
 ## Theme
+
+## TODO
+- [x] Add RSS
+- [ ] Add tags
+- [ ] Add style for code block
