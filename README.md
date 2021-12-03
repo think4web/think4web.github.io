@@ -9,5 +9,5 @@
 
 ## TODO
 - [x] Add RSS
-- [ ] Add tags
+- [x] Add tags
 - [ ] Add style for code block
