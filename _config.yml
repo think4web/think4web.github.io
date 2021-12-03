@@ -11,6 +11,14 @@ description: Ласкаво прошу у мій блог
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
+defaults:
+  -
+    scope:
+      path: "_posts" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "default"
+
 #
 # Flags below are optional
 #
@@ -84,3 +92,6 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  
+show_drafts: true
+
