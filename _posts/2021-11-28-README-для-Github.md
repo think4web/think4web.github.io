@@ -9,3 +9,10 @@ published: false
 [GitHub Readme Stats](#https://github.com/anuraghazra/github-readme-stats)
 [Simple Icons Repo](https://github.com/simple-icons/simple-icons)
 [ awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme)
+
+
+https://github.com/ankurparihar/readme-pagespeed-insights
+https://github.com/rafaballerini/rafaballerini/edit/main/README.md
+
+https://github.com/khalby786/REHeader
+https://github.com/DenverCoder1/readme-typing-svg
