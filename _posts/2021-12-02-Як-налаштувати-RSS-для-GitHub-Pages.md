@@ -1,5 +1,8 @@
 ---
 published: true
+layout: post
+title: Як налаштувати RSS для GitHub Pages
+tags: github-pages
 ---
 ## Підключаємо плагін для генерації фіда
 
