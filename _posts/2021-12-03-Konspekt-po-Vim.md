@@ -3,7 +3,7 @@ publised: true
 layout: post
 title: Конспект по Vim
 tags: vim
-published: false
+published: true
 ---
 
 Переміщення:
@@ -29,5 +29,3 @@ published: false
 - **:buffers** - подивитись відкриті файли 
 
 Переміщення:
-
-
