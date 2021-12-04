@@ -1,9 +1,8 @@
 ---
-publised: true
+published: true
 layout: post
 title: Конспект по Vim
 tags: vim
-published: true
 ---
 
 Переміщення:

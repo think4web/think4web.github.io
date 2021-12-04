@@ -1,5 +1,5 @@
 ---
-publised: false
+published: false
 layout: post
 title: 
 tags: 
