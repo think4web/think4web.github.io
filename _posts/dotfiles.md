@@ -1,6 +1,10 @@
+ ---
+published: false
+layout: post
+title:
+tags: git linux 
 ---
-publised: false
----
+
 
 ```bash
 mkdir .dotfiles
@@ -11,5 +15,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' # (add
 bash
 dotfiles config --local status.showUntrackedFiles no
 ```
+
+У різних репозиторіях можна збирати конфігураційні файли для різних оболонок або систем.
 
 Джерело: [DistroTube:Git Bare Repository](https://www.youtube.com/watch?v=tBoLDpTWVOM)
