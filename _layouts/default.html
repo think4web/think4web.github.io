@@ -48,6 +48,10 @@
       </div>
     </div>
 
+    {% if site.tags != "" %}
+  {% include collecttags.html %}
+{% endif %}
+
     {% include analytics.html %}
   </body>
 </html>
