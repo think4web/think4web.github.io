@@ -1,5 +1,5 @@
 ---
-publised: false
+publised: true
 layout: post
 title: Як налаштувати безкоштовний Call Tracking від Google
 tags: google-ads
