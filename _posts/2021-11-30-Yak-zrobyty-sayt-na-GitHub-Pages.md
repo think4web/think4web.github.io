@@ -9,4 +9,4 @@ https://github.com/daattali/beautiful-jekyll#features - тут інструкц�
 http://longqian.me/2017/02/09/github-jekyll-tag/ - додати теги
 
 
-
+https://medium.com/@xiang_zhou/how-to-add-a-favicon-to-your-jekyll-site-2ac2179cc2ed - змінити фавікон?
