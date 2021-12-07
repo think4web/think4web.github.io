@@ -10,3 +10,4 @@
 - [x] Add RSS
 - [x] Add tags
 - [ ] Add style for code block
+- [ ] Add license
