@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: Privacy"
-tag: privacy
+title: "Tag: Vim"
+tag: vim
 ---
