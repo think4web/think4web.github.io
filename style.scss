@@ -153,8 +153,12 @@ img {
   margin-bottom: 1px;
 }
 
+.masthead, .nav {
+	padding: 5px 5px;
+}
+
 .masthead {
-  padding: 5px 5px;
+  // padding: 5px 5px;
   border-bottom: 1px solid $white;
 
   @include mobile {
