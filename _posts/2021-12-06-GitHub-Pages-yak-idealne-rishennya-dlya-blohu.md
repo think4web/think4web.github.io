@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: GitHub Pages як ідеальне рішення для блогу
 discription: Чому Github Pages підходить для ведення особистого блогу якщо ви пишете нотатки у Markdown. Якими програмами я користувався і користуюсь для ведення особистих записів.
