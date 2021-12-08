@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Скрипт Google Ads для перевірки наявності товару
-tags: goole-ads script 
+tags: google-ads script 
 discription: Скрипт Google Ads зупиняє або відновлює роботу оголошень в залежності від наявності товару на сторінці.
 ---
 
