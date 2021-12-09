@@ -1,6 +1,6 @@
 ---
 published: true
-layout: true
+layout: post
 title: Google Tag Manager. Активація Facebook Pixel за таймером
 tags: google-tag-manager 
 discription: Налаштування запуску Facebook Pixel за таймером через Google Tag Manager для користувачів з зовнішнього сайту або за прямими заходами.
