@@ -544,7 +544,7 @@ sub  3072R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: 
 gpg> primary
 
 You need a passphrase to unlock the secret key for
-user: "Alice <alice@example.com>""
+user: "Alice <alice@example.com>"
 4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
 
 Enter passphrase: YourPassword
