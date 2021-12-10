@@ -24,7 +24,7 @@ discription:
 - **Представлення**
     Рівень для відображення даних. Одне подання краще залишити без змін і створити копію для роботи з рекламою.
 
-![Рівні налаштувань Google Analytics](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics2.png)
+![Рівні налаштувань Google Analytics](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics-2.png)
 
 Налаштування облікового запису поки залишимо без змін і перейдемо до ресурсу і уявленням.
 
@@ -32,11 +32,11 @@ discription:
 
 Перейдемо в настройки збору даних і включимо настройку для збору даних для персоналізації реклами "Google signals".
 
-![Google Analytics: Google signals](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics3.png)
+![Google Analytics: Google signals](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics-3.png)
 
 У наступному пункті вибираємо період зберігання даних. 
 
-![Період зберігання даних Google Analytics](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics4.png)
+![Період зберігання даних Google Analytics](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics-4.png)
 
 Перш ніж налаштовувати рекламу, необхідно подумати про те, як ми будемо оцінювати її результати. Швидше за все нам потрібно щоб реклама приводила до нас на сайт користувачів, які будуть здійснювати на сайті певні дії і це принесе нам прибуток. Якщо все вірно, потрібно фіксувати потрібні дії, які здійснюють користувачі на сайті. Знаючи скільки грошей нам принесе певну дію клієнта на сайті, ми можемо поставити цінність цього дійства. Такі дії називаються конверсіями. Маючи цінність конверсії і знаючи витрати реклами, ми можемо порахувати скільки грошей нам принесла реклама. Таким чином ми будемо домагатися рентабельності реклами.
 
@@ -48,7 +48,7 @@ discription:
 
 Цілі налаштовуються на рівні представлення.
 
-![Налаштування цілей Google Analytics](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics5.png)
+![Налаштування цілей Google Analytics](/images/Google-Ads-Pokrokova-instruktsiya-Nalashtuvannya-Google-Analytics-5.png)
 
 Тут ми можемо додати нові цілі. В якості цілі можна використовуватися будь-яка дія користувачів на сайті. Але зараз ми налаштуємо самий простий варіант - відвідування певної сторінки сайту.
 
