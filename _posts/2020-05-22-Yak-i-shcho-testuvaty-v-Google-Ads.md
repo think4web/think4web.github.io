@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Як і що тестувати в Google Ads
 tags: google-ads
