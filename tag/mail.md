@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: Mail"
-tag: mail 
+title: "Tag: GnuPG"
+tag: gpg
 ---
