@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Як додати розумну стратегію Google Ads у кампанію без конверсій
 tags: google-ads
