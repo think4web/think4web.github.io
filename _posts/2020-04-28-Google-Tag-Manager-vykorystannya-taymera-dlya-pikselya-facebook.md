@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Google Tag Manager. Активація Facebook Pixel за таймером
 tags: google-tag-manager 

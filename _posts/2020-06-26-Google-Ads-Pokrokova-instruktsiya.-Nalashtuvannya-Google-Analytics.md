@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Google Ads. Покрокова інструкція. Налаштування Google Analytics
 tags: google-ads google-analytics

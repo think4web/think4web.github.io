@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Скрипт Google Ads для перевірки наявності товару
 tags: google-ads script 
