@@ -182,16 +182,6 @@ img {
   }
 }
 
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
 .site-name {
   margin: 0;
   color: $gray;
@@ -246,6 +236,16 @@ nav {
 	}
 }
 
+.site-info {
+  float: left;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .nav {
       ul {
       list-style-type: none;
@@ -254,8 +254,11 @@ nav {
 
       li {
           float: right;
-	  padding: 5px;
           }
+     a {
+	display: block;
+        padding: 5px;
+	}
 }
 
 .date {
