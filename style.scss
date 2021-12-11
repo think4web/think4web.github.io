@@ -207,6 +207,7 @@ img {
       list-style-type: none;
       overflow: hidden;
       margin-bottom: 0px;
+      margin-left: 0px;
       padding-left: 0px;
       }
 
@@ -215,6 +216,7 @@ img {
           }
      a {
 	display: block;
+	text-align: center;
         padding: 5px;
 	}
 }
