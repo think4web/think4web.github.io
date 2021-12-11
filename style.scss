@@ -245,6 +245,7 @@ nav {
 //
 // .main
 //
+
 .entry {
 	a {
   		color: $white;
@@ -256,6 +257,9 @@ nav {
 	}
 }
 
+.date {
+	text-align: right;
+}
 
 .post {}
  //  	text-transform: lowercase;
