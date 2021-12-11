@@ -2,8 +2,11 @@
 published: true
 layout: post
 title: Як налаштувати RSS для GitHub Pages
+author: think4web
+discription: Додаємо RSS до нашого сайту GitHub Pages.
 tags: github-pages
 ---
+
 ## Підключаємо плагін для генерації фіда
 
 Перевіряємо або додаємо у `_config.yml` наступне:
