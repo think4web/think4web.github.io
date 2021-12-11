@@ -9,8 +9,8 @@ published: true
   <div class="entry">
     {{ content }}
   </div>
-  <div>
-  	{{ post.date | date: "%Y.%m.%d" }}
+    <div class="date">
+      {{ page.date | date: "%Y.%m.%d" }}
   </div>
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
