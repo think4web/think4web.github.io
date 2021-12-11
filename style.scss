@@ -266,7 +266,9 @@ nav {
   //border-bottom: 1px solid $dark;
   
 }
-
+.posts > .post:first-child {
+				padding-top: 5px;
+}
 .posts > .post:last-child {
   padding-bottom: 0.5em;
   border-bottom: 1px solid $gray;
