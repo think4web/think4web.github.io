@@ -79,7 +79,7 @@ a {
 
 ul, ol {
   margin: 15px 0;
-  padding-left: 0px;
+  padding-left: 30px;
 }
 
 ul {
@@ -208,7 +208,7 @@ img {
       overflow: hidden;
       margin-bottom: 0px;
       margin-left: 0px;
-      padding-left: 0px;
+      padding-left: 0px !important;
       }
 
       li {
@@ -217,7 +217,7 @@ img {
      a {
 	display: block;
 	text-align: center;
-	vertical-align: super;
+	vertical-align: middle;
         padding: 5px;
 	}
      h1 {
