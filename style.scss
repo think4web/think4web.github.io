@@ -225,36 +225,7 @@ nav {
     margin-bottom: 20px;
     display: block;
     font-size: 16px;
-  a {
-    margin-left: 20px;
-    color: $gray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-	  text-decoration: none;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
     }
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      }
-
-      li {
-          float: left;
-          }
-
-      li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-	  }
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -277,6 +248,28 @@ li a:hover {
 		color: $dark;
 		background-color: $white;
 	}
+}
+
+.nav {
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      }
+
+      li {
+          float: left;
+          }
+
+      li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+	  }
+
 }
 
 .date {
