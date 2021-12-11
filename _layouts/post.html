@@ -11,6 +11,9 @@ published: true
   </div>
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
+  <div class="date">
+      {{ page.date | date: "%Y.%m.%d" }}
+  </div>
 </article>
 
 <span>[
@@ -19,7 +22,3 @@ published: true
     <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
   {% endfor %}
 ]</span>
-
-<div class="date">
-      {{ page.date | date: "%Y.%m.%d" }}
-  </div>
