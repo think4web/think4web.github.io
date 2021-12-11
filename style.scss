@@ -245,8 +245,7 @@ nav {
 //
 // .main
 //
-
-.post {
+.entry {
 	a {
   		color: $white;
   		text-decoration: underline $white;
@@ -255,6 +254,10 @@ nav {
 		color: $dark;
 		background-color: $white;
 	}
+}
+
+
+.post {}
  //  	text-transform: lowercase;
 }
 .posts > .post {
