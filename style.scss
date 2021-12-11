@@ -229,11 +229,6 @@ nav {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-  }
-}
 
 //
 // .main
@@ -269,6 +264,10 @@ li a:hover {
             padding: 14px 16px;
             text-decoration: none;
 	  }
+	li a:hover {
+	background-color: #111;
+      }
+}
 
 }
 
