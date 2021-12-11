@@ -212,10 +212,6 @@ img {
   }
 }
 
-a.post {
-	 text-decoration: underline; 
-}
-
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
@@ -251,10 +247,14 @@ nav {
 //
 
 .post {
-	a:hover, a:active {
+	// a:hover, a:active {
+	a {
   		color: $white;
   		text-decoration: underline $white;
     	}
+	a:hover, a:active {
+		background-color: $white;
+	}
  //  	text-transform: lowercase;
 }
 .posts > .post {
