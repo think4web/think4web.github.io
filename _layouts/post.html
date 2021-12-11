@@ -4,23 +4,20 @@ published: true
 ---
 
 <article class="post">
-  <!-- <h1>{{ page.title | downcase | capitalize }}</h1> -->
   <h1>{{ page.title }}</h1>
 
   <div class="entry">
     {{ content }}
   </div>
 
-  <!--<div class="date">
-  	Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>-->
-
+  <div class="date">
+  	{{ page.date | date: "%B %e, %Y" }}
+  </div>
+  <div class="tags">
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  </div>
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
 </article>
-<span>[
-  {% for tag in page.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-  {% endfor %}
-]</span>
+<span>
+</span>
