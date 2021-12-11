@@ -65,6 +65,14 @@ h4 {
 
 p {
   margin: 15px 0;
+	a {
+  		color: $white;
+  		text-decoration: underline $white;
+	}
+	a:hover, a:active {
+		color: $gray;
+		background-color: $white;
+	
 }
 
 a {
@@ -248,13 +256,8 @@ nav {
 
 .post {
 	// a:hover, a:active {
-	a {
-  		color: $white;
-  		text-decoration: underline $white;
+
     	}
-	a:hover, a:active {
-		color: $gray;
-		background-color: $white;
 	}
  //  	text-transform: lowercase;
 }
