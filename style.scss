@@ -266,7 +266,8 @@ nav {
  //  	text-transform: lowercase;
 .posts > .post {
   padding-bottom: 0.5em;
-  //border-bottom: 1px solid $dark;
+  border-top: 1px solid $white;
+  border-bottom: 1px solid $white;
   
 }
 .posts > .post:first-child {
@@ -274,7 +275,7 @@ nav {
 }
 .posts > .post:last-child {
   padding-bottom: 0.5em;
-  border-bottom: 1px solid $gray;
+  // border-bottom: 1px solid $gray;
 }
 
 .post {
