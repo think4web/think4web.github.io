@@ -202,6 +202,23 @@ img {
   }
 }
 
+.site-info {
+      ul {
+      list-style-type: none;
+      overflow: hidden;
+      margin-bottom: 0px;
+      padding-left: 0px;
+      }
+
+      li {
+          float: right;
+          }
+     a {
+	display: block;
+        padding: 5px;
+	}
+}
+
 nav {
   // float: right;
   margin-top: 10px; // @TODO: Vertically middle align
@@ -233,23 +250,6 @@ nav {
 	a:hover, a:active {
 		color: $dark;
 		background-color: $white;
-	}
-}
-
-.site-info {
-      ul {
-      list-style-type: none;
-      overflow: hidden;
-      margin-bottom: 0px;
-      }
-
-      li {
-          float: right;
-	  padding-left: 0px;
-          }
-     a {
-	display: block;
-        padding: 5px;
 	}
 }
 
