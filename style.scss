@@ -253,6 +253,7 @@ nav {
   		text-decoration: underline $white;
     	}
 	a:hover, a:active {
+		color: $gray;
 		background-color: $white;
 	}
  //  	text-transform: lowercase;
