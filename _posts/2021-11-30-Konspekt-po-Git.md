@@ -4,7 +4,6 @@ layout: post
 title: Конспект по Git
 author: think4web
 discription: Конспект по Git
-date: 2021-11-30
 tags: linux git
 ---
 
