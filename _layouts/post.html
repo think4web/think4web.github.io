@@ -9,15 +9,15 @@ published: true
   <div class="entry">
     {{ content }}
   </div>
-
   <div class="date">
-  	{{ page.date | date: "%B %e, %Y" }}
-  </div>
-  <div class="tags">
-    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  	{{ post.date | date: "%Y.%m.%d" }}
   </div>
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
 </article>
-<span>
-</span>
+<span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  {% endfor %}
+]</span>
