@@ -4,7 +4,7 @@ layout: post
 title: Конспект по Vim
 tags: vim
 ---
-
+ 
 Переміщення:
 - **0** - переміщення у початок рядка
 - **$** - переміщення у кінець рядка
@@ -33,4 +33,15 @@ tags: vim
 - **:s/те_що_треба_замінити/те_на_що_треба_замінити/** - заміна тексту у рядку
 -**:s/те_що_треба_замінити/те_на_що_треба_замінити/g** - заміна тексту у всьому документі
 
- 
+Для встановлення плагенів потрібен менеджер. Потім у .vimrc додати у блок з благінами назву плагіну. Потім ввести команду :source .vimrc щоб перечитати конфігурацію Vim. Далі ввести :PlugInstall
+
+Плагіни
+- [vim-plug](https://github.com/preservim/vim-lexical) - перевірка правипису
+
+
+
+https://linuxhint.com/vim_spell_check/ - налаштування перевірки правопису
+https://github.com/preservim/vim-lexical - плагін
+
+https://github.com/dpelle/vim-LanguageTool - плагін для перевірки орфографії
+https://www.youtube.com/watch?v=ez1XBUqbS68 - Vim's built-in Spell-Checker, Corrections and Multilingual Dictionaries!
