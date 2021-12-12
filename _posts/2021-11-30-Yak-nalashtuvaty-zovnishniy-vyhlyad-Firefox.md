@@ -1,5 +1,10 @@
 ---
 published: false
+layout: post
+title: Як налаштувати зовнішній вигляд Firefox
+author: think4web
+discription: Змінюємо Firefox як нам хочешься за допомогою CSS.
+tags: firefox
 ---
 
 Щоб змінити зовнішний виглід Firefox необхідно знайти або створити файл `userChrome.css` за гляхом:

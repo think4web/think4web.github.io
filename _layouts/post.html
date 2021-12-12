@@ -4,20 +4,18 @@ published: true
 ---
 
 <article class="post">
-  <!-- <h1>{{ page.title | downcase | capitalize }}</h1> -->
   <h1>{{ page.title }}</h1>
 
   <div class="entry">
     {{ content }}
   </div>
-
-  <!--<div class="date">
-  	Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>-->
-
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
+  <div class="date">
+      {{ page.date | date: "%d.%m.%Y" }}
+  </div>
 </article>
+
 <span>[
   {% for tag in page.tags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}

@@ -25,15 +25,17 @@
         <header class="masthead clearfix">
           <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a> -->
 
-          <div class="site-info">
+          <!--<div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <!-- <p class="site-description">{{ site.description }}</p> -->
-          </div>
+            <p class="site-description">{{ site.description }}</p>
+          </div>-->
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Блог</a>
-            <!-- <a href="{{ site.baseurl }}/about">About</a> -->
-            <a href="{{ site.baseurl }}/feed.xml">RSS</a>
+          <nav class="site-info">
+	    <ul>
+		<li style="float:left"><h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1></li>
+                <li><a href="{{ site.baseurl }}/">Блог</a></li>
+                <!-- <li><a href="{{ site.baseurl }}/about">About</a></li> -->
+                <li><a href="{{ site.baseurl }}/feed.xml">RSS</a></li>
           </nav>
           
         </header>
@@ -52,10 +54,5 @@
         </footer>
       </div>
     </div>
-
-    {% if site.tags != "" %}
-  {% include collecttags.html %}
-{% endif %}
-
   </body>
 </html>

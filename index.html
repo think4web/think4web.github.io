@@ -2,12 +2,11 @@
 layout: default
 published: true
 ---
-<br />
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
-      <a href="{{ post.url }}">{{ post.title }} / {{ post.date | date: "%d.%m.%Y" }}</a>
+      <a href="{{ post.url }}">{{ post.date | date: "%Y.%m.%d" }} - {{ post.title }}</a>
 
       <!--<div class="entry">
         {{ post.excerpt }}

@@ -156,7 +156,7 @@ img {
 
 .masthead {
   // padding: 5px 5px;
-  border-bottom: 1px solid $white;
+  // border-bottom: 1px solid $white;
 
   @include mobile {
     text-align: center;
@@ -182,16 +182,6 @@ img {
   }
 }
 
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
 .site-name {
   margin: 0;
   color: $gray;
@@ -212,9 +202,32 @@ img {
   }
 }
 
+.site-info {
+      ul {
+      list-style-type: none;
+      overflow: hidden;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      padding-left: 0px !important;
+      }
+
+      li {
+          float: right;
+          }
+     a {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+        padding: 5px;
+	}
+     h1 {
+	margin: 0;
+	}
+}
+
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  // float: right;
+  margin-top: 10px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
   padding: 0;
@@ -225,48 +238,50 @@ nav {
     margin-bottom: 20px;
     display: block;
     font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $gray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
     }
-  }
 }
+
+/* Change the link color to #111 (black) on hover */
 
 //
 // .main
 //
 
-.post {
-	a:hover, a:active {
+.entry {
+	a {
   		color: $white;
   		text-decoration: underline $white;
-    	}
- //  	text-transform: lowercase;
-}
-.posts > .post {
-  padding-bottom: 0.5em;
-  //border-bottom: 1px solid $dark;
-  
+	}
+	a:hover, a:active {
+		color: $dark;
+		background-color: $white;
+	}
 }
 
+.date {
+	text-align: right;
+}
+
+.post {}
+ //  	text-transform: lowercase;
+.posts > .post {
+  padding-bottom: 0.5em;
+  // border-top: 1px solid $white;
+  // border-bottom: 1px solid $white;
+  
+}
+.posts > .post:first-child {
+  padding-top: 0.5em;
+}
 .posts > .post:last-child {
   padding-bottom: 0.5em;
-  border-bottom: none;
+  // border-bottom: 1px solid $gray;
 }
 
 .post {
   blockquote {
     // margin: 0.1em .1em;
-    border-left: 2px solid $gray;
+    // border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
     font-size: 24px;
@@ -284,9 +299,7 @@ nav {
 }
 
 .wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  margin-top: 5px;
   background-color: $dark;
 }
 
