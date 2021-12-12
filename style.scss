@@ -203,42 +203,40 @@ img {
 }
 
 .site-info {
-      ul {
-      list-style-type: none;
-      overflow: hidden;
-      margin-bottom: 0px;
-      margin-left: 0px;
-      padding-left: 0px !important;
-      }
+  float: left;
 
-      li {
-          float: right;
-          }
-     a {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-        padding: 5px;
-	}
-     h1 {
-	margin: 0;
-	}
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 nav {
   float: right;
-  margin-top: 10px; // @TODO: Vertically middle align
+  margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
-  padding: 0;
 
   @include mobile {
     float: none;
     margin-top: 9px;
-    margin-bottom: 20px;
     display: block;
     font-size: 16px;
+  }
+
+  a {
+    margin-left: 20px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $white;
     }
+  }
 }
 
 /* Change the link color to #111 (black) on hover */
