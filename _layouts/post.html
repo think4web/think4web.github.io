@@ -11,11 +11,10 @@ published: true
   </div>
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
-  <div class="date">
+ </article>
+ <div class="date">
       {{ page.date | date: "%d.%m.%Y" }}
   </div>
-</article>
-
 <span>[
   {% for tag in page.tags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
