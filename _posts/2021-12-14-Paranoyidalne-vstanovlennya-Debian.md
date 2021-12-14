@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Параноїдальне встановлення Debian
 author: think4web
