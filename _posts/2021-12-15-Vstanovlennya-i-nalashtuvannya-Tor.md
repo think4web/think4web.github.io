@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Встановлення і налаштування Tor
 author: think4web
