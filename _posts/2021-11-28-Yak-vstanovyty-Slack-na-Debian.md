@@ -20,3 +20,5 @@ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.d
 ```bash
 sudo dpkg -i slack-desktop-4.0.2-amd64.deb
 ```
+
+Все готово, можна запускати Slack.
