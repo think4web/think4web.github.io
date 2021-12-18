@@ -4,7 +4,7 @@ layout: post
 title: Як встановити Slack на Debian
 author: think4web
 discription: Як встановити Slack пакетом .deb на Debian
-tags: linux
+tags: linux software
 ---
 
 На офіційному сайті [Slack](https://slack.com/) важко щось знайти і програма поширюється у .rpm, що мені не зручно. Тому ось інструкція як встановити Slack нормальним .deb пакетом.
