@@ -4,7 +4,7 @@ layout: post
 title: pipe-viewer
 author: think4web
 discription: Встановлення і налаштування pipe-viewer.
-tags: pipe-viewer
+tags: software
 ---
 
 [pipe-viewer](https://github.com/trizen/pipe-viewer) - це легка та багатофункціональна програма для відео з YouTube.
