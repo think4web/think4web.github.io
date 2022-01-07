@@ -114,7 +114,7 @@ gpg: agent_genkey failed: No such file or directory
 Key generation failed: No such file or directory
 ```
 
-Просто вбийте``` gpg-agent``` командою ```gpgconf --kill gpg-agent```.
+Просто вбийте ``` gpg-agent``` командою ```gpgconf --kill gpg-agent```.
 
 Нагадаю, що ключі генеруються без підключення до мережі інтернет.
 
