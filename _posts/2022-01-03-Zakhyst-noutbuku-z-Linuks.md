@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 layout: post
-title: 
+title: Захист ноутбуку з Linux 
 author: think4web
 discription:
 tags: security 
