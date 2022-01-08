@@ -51,3 +51,5 @@ tags: gpg
 - version - показати версію програми;
 - warranty - показати гарантії;
 - help - показати довідку.
+
+Переклад і адаптація: [OpenNET. Список команд](https://www.opennet.ru/docs/RUS/pgupg/r598.html)
