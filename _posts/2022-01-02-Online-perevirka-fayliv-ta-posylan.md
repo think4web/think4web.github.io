@@ -14,3 +14,9 @@ tags: security services
 
 Для перевірки безпечності кінечного посилання:
 - [Norton Safe Web](https://safeweb.norton.com/)
+
+Для перевірки файлів:
+- [FortiGuard Labs. Online Scanner](https://www.fortiguard.com/faq/onlinescanner) - перевіряє файли;
+- [VirusTotal](https://www.virustotal.com/gui/home/upload) - вміє перевіряти файли та посилання;
+- [Hybrid Analysis](https://hybrid-analysis.com/) - вміє перевіряти файли крім архівів; 
+- []()
