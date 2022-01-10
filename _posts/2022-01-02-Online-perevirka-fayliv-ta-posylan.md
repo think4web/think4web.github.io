@@ -12,11 +12,19 @@ tags: security services
 - [TinyURL](https://tinyurl.com)
 - [Unshorten.It](https://unshorten.it/)
 
-Для перевірки безпечності кінечного посилання:
-- [Norton Safe Web](https://safeweb.norton.com/)
 
-Для перевірки файлів:
+Для перевірки посилань або файлів:
 - [FortiGuard Labs. Online Scanner](https://www.fortiguard.com/faq/onlinescanner) - перевіряє файли;
-- [VirusTotal](https://www.virustotal.com/gui/home/upload) - вміє перевіряти файли та посилання;
 - [Hybrid Analysis](https://hybrid-analysis.com/) - вміє перевіряти файли крім архівів; 
-- []()
+- [VirusTotal](https://www.virustotal.com/gui/home/upload) - вміє перевіряти файли та посилання;
+- [OPSWAT MetaDefender Cloud](https://metadefender.opswat.com/) - перевіряє посиланян та файли.
+
+Перевірка сайтів та посилань:
+- [AbuseiPDB](https://www.abuseipdb.com/) - перевірка сайтів;
+- [Quttera](https://quttera.com/website-malware-scanner) - перевірка сайтів;
+- [Norton Safe Web](https://safeweb.norton.com/) - перевірка посилань.
+
+Перевірка IP-адрес:
+- [IPVOID](https://www.ipvoid.com/) - перевірка IP;
+- [Virus Tracker](https://virustracker.net/) - перевірка IP.
+
