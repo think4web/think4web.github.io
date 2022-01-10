@@ -3,10 +3,14 @@ published: true
 layout: post
 title: Перевірка згорнутих посилань
 author: think4web
-discription:
+discription: Сервіси, що дозволяють розгорнути скорочені посилання і побачити куди вони ведуть та перевірити посилання на наявність шкідливого змісту.
 tags: security services
 ---
 
-- CheckShortURL
-- TinyURL
-- Unshorten.It
+Розгорнути посилання:
+- [CheckShortURL](https://www.checkshorturl.com/)
+- [TinyURL](https://tinyurl.com)
+- [Unshorten.It](https://unshorten.it/)
+
+Для перевірки безпечності кінечного посилання:
+- [Norton Safe Web](https://safeweb.norton.com/)
