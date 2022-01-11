@@ -5,10 +5,8 @@ published: true
 
 <article class="post">
   <h1>{{ page.title }}</h1>
-
-   <div class="date">
-      {{ page.date | date: "%d.%m.%Y" }}
-  </div>
+  
+   <div class="date">{{ page.date | date: "%d.%m.%Y" }}</div>
   
   <div class="entry">
     {{ content }}
@@ -16,13 +14,10 @@ published: true
   <!--{% include disqus.html %}-->
   <!--{% include mastodon.html %}-->
  </article>
- <div class="date">
-      {{ page.date | date: "%d.%m.%Y" }}
-  </div>
 
-<span>Tags:
+<div>Tags:
   {% for tag in page.tags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
     <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
   {% endfor %}
-</span>
+</div>
