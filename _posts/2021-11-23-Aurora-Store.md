@@ -1,9 +1,9 @@
 ---
 published: true
 layout: post
-title: Aurora Store 
+title: Aurora Store - альтернативний клієнт для Google Play Store
 author: think4web
-discription:
+discription: Альтернативний клієнт для Google Play Store з відкритим кодом що дозволяє завантажувати застосунки анонімно або через свій обліковий запис та переглядати трекери у застосункаї.
 tags: android software
 ---
 
