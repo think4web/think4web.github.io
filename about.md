@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 published: true
 ---
-Some information about you!
 
-### More Information
+## Контакти
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[matrix](@jwtzbtlceh:here.in.ua)
+[pleroma](https://social.net.ua/think4web)
+[mail](mailto:email@domain.com)
