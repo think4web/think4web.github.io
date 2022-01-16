@@ -10,7 +10,7 @@ published: true
 - [pleroma](https://social.net.ua/think4web)
 - [mail](mailto:efxice9c@anonaddy.me)
 
-```gpg
+```bash
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHjrAIBEADCga9GHfzPltzISpHUYLsapEJKTqFMpcGgc3kFzU07RROReqB/
