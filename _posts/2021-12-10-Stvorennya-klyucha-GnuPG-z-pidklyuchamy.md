@@ -851,10 +851,5 @@ Old: Signature Packet(tag 2)(549 bytes)
 ```
 
 Навіть якщо використовувати gpgdump не так зручно, як перевіряти ключ за допомогою hopenpgp-tools, є інші деталі, які можуть бути цікавими. Крім того, для RedHat / CentOS та інших дистрибутивах на основі rpm він пропонує хорошу альтернативу honpgp-tools.
- 
-
-## Клієнти
-
-[OpenKeychain](https://f-droid.org/packages/org.sufficientlysecure.keychain/)
 
 Переклад і доповнення статті: ["Create GnuPG key with sub-keys to sign, encrypt, authenticate"](https://blog.tinned-software.net/create-gnupg-key-with-sub-keys-to-sign-encrypt-authenticate/)
