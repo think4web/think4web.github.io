@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Створення завантажувальної флешки з Tails
+title: Створення завантажувальної флешки з Tails OS
 author: think4web
 discription: Створення завантажувальної флешки Live-USB і налаштування операційной системи Tails.
 tags: tails software privacy tor
