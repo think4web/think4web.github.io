@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Конспект по GnuPG
 author: think4web
@@ -39,7 +39,7 @@ tags: gpg
 | **edit-key** | ```edit-key %key%``` | редактувати ключі |
 | **sign-key** | ```sign-key %name%``` | підписати відкритий ключ закритим ключем |
 | **lsign-key** | ```lsign-key %name%``` | підписати відкритий ключ локально |
-| **trusted-key** | | вважати ключ достовірним |
+| **trusted-key** | ```| вважати ключ достовірним |
 | **delete-key** | | видалити відкритий ключ |
 | **delete-secret-key** | | видалити відкритий і закритий ключі |
 | **store** | | створити пакети з rfc1991 |
