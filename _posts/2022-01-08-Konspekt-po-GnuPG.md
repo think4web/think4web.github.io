@@ -88,3 +88,6 @@ with-fingerprint
 ## Клієнти
 
 [OpenKeychain](https://f-droid.org/packages/org.sufficientlysecure.keychain/)
+
+Адаптація і доповнення статтей: 
+- ["Create GnuPG key with sub-keys to sign, encrypt, authenticate"](https://blog.tinned-software.net/create-gnupg-key-with-sub-keys-to-sign-encrypt-authenticate/)
