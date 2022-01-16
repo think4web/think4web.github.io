@@ -586,7 +586,8 @@ $ gpg --homedir /%флешка%/.gnupg --export --armor --output ~/.gnupg/public
 Щоб експортувати лише один конкретний підключ, ідентифікатор підключа можна вказати за допомогою «!» Знак оклику в кінці ID ключа вказує gpg експортувати лише цей конкретний підключ. Це доцільно зробити для підключів які будуть використовуватись на окремих пристроях. 
 
 ```bash
-$ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output ~/.gnupg/secret-subkey_sign.gpg 0x1ED73636975EC6DE!
+$ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output ~/.gnupg/secret-subkeys/0x1ED73636975EC6DE.asc 0x1ED73636975EC6DE!
+$ gpg --homedir /%флешка%/.gnupg --export --armor --output ~/.gnupg/public-keys/0xD93D03C13478D580.asc 0xD93D03C13478D580!
 ```
 
 Наведена вище команда експортує лише секретний ключ підключа для підпису. Довідкова сторінка gpg описує знак оклику в ідентифікаторі ключа так.
