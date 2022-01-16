@@ -1,56 +1,14 @@
 ---
 published: false
 layout: post
-title: Конспект по GnuPG
+title: Конспект по GnuPG 
 author: think4web
-discription: Основні команди GnuPG та їх значення.
-tags: gpg 
+discription:
+tags: gpg
 ---
 
-**Специфікатори ключів (key specifier)** - це ідентифікатор ключа або будь яка частина ідентифікатора користувача ключа.
+Для початку роботи встановіть пакет ```gnupg```. 
 
-| **Команди** | **Синтаксис** | **Пояснення** |
-| :--- | --- | :--- |
-| **sign** | ```gpg sign %filename%``` | підписати документ |
-| **detach-sign** | ```gpg detach-sign %filename%``` | створити відокремленй підпис |
-| **encrypt** | ```gpg encrypt %filename%``` | зашифрувати документ |
-| **symmetric** | ```gpg symmetric %filename%``` | зашифрувати документ використовуючи тільки алгоритм семетричного шифрування;
-| **decrypt** | ```decrypt %filename%``` | розшифрувати документ |
-| **clearsign** | ```clearsign %filename%``` | створити прозорий підпис |
-| **verify** | ```verify sigfile``` | перевірити підписаний документ |
-| **verify-files** | ```verify-files %files%``` | перевірити підписані документи |
-| **gen-key** | ```gen-key``` | генерувати нову пару ключів |
-| **gen-revoke** | ```gen-revoke``` | генерувати сертифікат відкликання пари ключів |
-| **send-keys** | ```send-keys %keys%``` | відправити ключі на сервер ключів |
-| **recv-keys** | ```recv-keys %key-IDs%```| запитати ключі з серверу ключів |
-| **list-keys** | ```list-keys %names%``` | вивести інформацію про ключі |
-| **list-public-keys** | ```list-public-keys %names%``` | показати публічні ключі з відкритих зв'язок ключів |
-| **list-secret-keys** | ```list-secret-keys %names%``` | показати секретні ключі з закритих зв'язок ключів |
-| **list-sigs** | ```list-sigs %names%``` | показати інформацію про ключі з підписами |
-| **check-sigs** | ```check-sigs %names%``` | показати інформацію про ключі з завіреними підписами |
-| **fingerprint** | ```fingerprint %names%``` | показати відбитки ключів |
-| **list-packets** | ```list-packets``` | показати пакети |
-| **import** | ```import %files%``` | імпортувати-об'єднати ключі |
-| **fast-import** | ```fast-import %files%``` | імпортувати-об'єднати ключі |
-| **export** | ```export %names%``` | експортувати ключі з локальної зв'язки |
-| **export-all** | ```export-all %names%``` | експортувати усі відкриті ключі |
-| **export-secret-keys** | ```export-secret-keys %names%``` | експортувати закриті ключі |
-| **export-secret-subkeys** | ```export-secret-subkeys %names%``` | експортувати закриті підключі |
-| **edit-key** | ```edit-key %key%``` | редактувати ключі |
-| **sign-key** | ```sign-key %name%``` | підписати відкритий ключ закритим ключем |
-| **lsign-key** | ```lsign-key %name%``` | підписати відкритий ключ локально |
-| **trusted-key** | ```| вважати ключ достовірним |
-| **delete-key** | | видалити відкритий ключ |
-| **delete-secret-key** | | видалити відкритий і закритий ключі |
-| **store** | | створити пакети з rfc1991 |
-| **export-ownertrust** | | експортувати присвоєні значення довіри |
-| **import-ownertrust** | | імпортувати значення довіри |
-| **update-trustdb** | | оновити базу даних довіри |
-| **print-md** | | показати дайджест повідомлення |
-| **gen-random** | | генерувати випадкові дані |
-| **gen-prime** | | |
-| **version** | | показати версію програми |
-| **warranty** | | показати гарантії |
-| **help** | | показати довідку |
+## Клієнти
 
-Переклад і адаптація: [OpenNET. Список команд](https://www.opennet.ru/docs/RUS/pgupg/r598.html)
+[OpenKeychain](https://f-droid.org/packages/org.sufficientlysecure.keychain/)
