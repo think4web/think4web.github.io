@@ -12,7 +12,7 @@ published: true
 
 <details>
   <summary>PGP key</summary>
- ```bash
+```bash
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHjrAIBEADCga9GHfzPltzISpHUYLsapEJKTqFMpcGgc3kFzU07RROReqB/
