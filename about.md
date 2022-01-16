@@ -11,7 +11,7 @@ published: true
 - [mail](mailto:efxice9c@anonaddy.me)
 
 <details>
-  <summary>**PGP key**</summary>
+  <summary>PGP key</summary>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHjrAIBEADCga9GHfzPltzISpHUYLsapEJKTqFMpcGgc3kFzU07RROReqB/
