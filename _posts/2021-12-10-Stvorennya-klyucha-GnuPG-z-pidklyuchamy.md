@@ -119,7 +119,7 @@ Key generation failed: No such file or directory
 Нагадаю, що ключі генеруються без підключення до мережі інтернет.
 
 ```bash
-$ gpg --homedir /%флешка%/.gnupg --expert --gen-key
+$ gpg --homedir /%флешка%/.gnupg --expert --full-generate-key
 gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -171,8 +171,8 @@ Please specify how long the key should be valid.
       <n>w = key expires in n weeks
       <n>m = key expires in n months
       <n>y = key expires in n years
-Key is valid for? (0) 2y
-Key expires at Fri 30 Nov 2018 10:44:14 PM CET
+Key is valid for? (0) 0
+Key does not expire at all
 Is this correct? (y/N) Y
 
 You need a user ID to identify your key; the software constructs the user ID
@@ -645,7 +645,7 @@ $ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output 
 Як і в першому варіанті, експорт лише з підключами має бути здійснений за допомогою команди вище. На додаток до наступних команд, я пропоную також скопіювати **gpg.conf**, який використовується в наборі ключів, щоб створити ключ для щоденного використання.
 
 ```bash
-$ gpg --homedir ~/.gnupg --import gnupg-backup/public-keys.gpg
+$ gpg --homedir ~/.gnupg --import %флешка%/public-keys.gpg
 gpg: key 0xD93D03C13478D580: public key "Alice <alice@example.org>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
@@ -654,7 +654,7 @@ gpg:               imported: 1  (RSA: 1)
 Наведену вище команду можна використовувати для імпорту публічного ключа до зв'язки, яку ви використовуєте щоденно. За допомогою наведеної нижче команди секретні підключі без головного секретного ключа можна імпортувати до щоденного використання ключів. «–homedir ~/.gnupg» можна опустити, якщо зв'язка знаходиться за замовчуванням, як у цьому прикладі. 
 
 ```bash
-$ gpg --homedir ~/.gnupg --import gnupg-backup/secret-subkeys.gpg
+$ gpg --homedir ~/.gnupg --import %флешка%/secret-subkeys.gpg
 gpg: key 0xD93D03C13478D580: secret key imported
 gpg: key 0xD93D03C13478D580: "Alice <alice@example.org>" 1 new signature
 gpg: Total number processed: 1
