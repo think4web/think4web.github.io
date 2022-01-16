@@ -611,7 +611,7 @@ $ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output 
 GnuPG другої версії просить видаляти кожен секретний ключ/підключ. На цьому етапі можна прийняти операцію видалення головного ключа, але видалити підключі можна заборонити. Це призведе до повідомлення про помилку для операції видалення, про те що підключи не були видалені. Так можна видалити секретний головний ключ, але зберегти підключі, а отже, не буде потреби повторного імпорту секретних підключів.
 
 ```bash
-$ gpg --homedir /%флешка%/.gnupg --delete-secret-keys 0xD93D03C13478D580
+$ gpg --homedir ~/.gnupg --delete-secret-keys 0xD93D03C13478D580
 gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
