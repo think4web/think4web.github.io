@@ -181,8 +181,11 @@ sec   4096R/0xD93D03C13478D580 2016-11-30 [expires: 2018-11-30]
       Key fingerprint = F8C8 1342 2A7F 7A3A 9027  E158 D93D 03C1 3478 D580
 uid                            Alice
 ```
+
 ## Налаштування параметрів ключа
+
 Щоб переконатися, що використовуються тільки надійні алгоритми, встановіть параметри для ключа за допомогою команди «setpref». 
+
 ```bash
 $ gpg --homedir /%флешка%/.gnupg --expert --edit-key 0xD93D03C13478D580
 gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
@@ -191,8 +194,8 @@ There is NO WARRANTY, to the extent permitted by law.
 Secret key is available.
 pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
                                trust: ultimate      validity: ultimate
-[ultimate] (1). Alice <alice@example.com>
-gpg> **setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed**
+[ultimate] (1). Alice
+gpg> setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 Set preference list to:
      Cipher: AES256, AES192, AES, CAST5, 3DES
      Digest: SHA512, SHA384, SHA256, SHA224, SHA1
@@ -200,7 +203,7 @@ Set preference list to:
      Features: MDC, Keyserver no-modify
 Really update the preferences? (y/N) Y
 You need a passphrase to unlock the secret key for
-user: "Alice <alice@example.com>"
+user: Alice
 4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
 Enter passphrase: YourPassword
 pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
@@ -209,6 +212,260 @@ pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: 
 gpg> save
 ```
 
+## Генерація підключів
+
+Підключі використовуються щоб не наражати на небезпеку основний ключ. Навіть у випадку компрометації підключа, його можна просто відкликати без необхідності відкликати основний ключ. Кількість підключів має відповідати кількості пристроїв на яких ви плануєте ними користуватися і їх призначенню (шифрування, підпис, автентифікації) так щоб для кожного пристрою були свій ключі.
+
+Перш ніж почати генерувати різні підключі, перевірте максимальний розмір, який може зберігати смарт-карта. Yubikey NEO може зберігати ключі до 2048 біт, а Yubikey 4 може зберігати ключі до 4096 біт. Смарт-карти зазвичай підтримують різні розміри: 2048, 3072 або 4096 біт.
+
+Щоб додати підключ, головний ключ потрібно відкрити для редагування. Наступна команда відкриє вказаний ключ (у наведеному нижче прикладі через ідентифікатор ключа) для редагування. Щоб мати можливість створити всі різні типи ключів, використовується параметр `–expert`.
+
+```bash
+$ gpg --homedir /%флешка%/.gnupg --expert --edit-key 0xD93D03C13478D580
+gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Secret key is available.
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
+                               trust: ultimate      validity: ultimate
+[ultimate] (1). Alice
+gpg> save
+```
+
+### Підключ для підпису
+
+У відкритий для редагування ключ можна додати підключ. Щоб почати керований процес створення підключа, введіть команду `addkey`.
+Після введення парольної фрази необхідно ввести тип підключа. Для ключа яким будемо підписувати використовується `(4) RSA (лише підписи)`. Розмір ключа повинен відповідати розміру доступному на смарт-картці або Yubikey, якщо розмір не має значення, краще використовувати 3072 або 4096 біт.
+
+У той час як GnuPG першої версії запитуватиме парольну фразу на початку процедури додавання ключа, друга версія запитуватиме в кінці процесу створення індивідуальну парольну фразу для нового підключа, а також парольну фразу головного ключа.
+
+```bash
+gpg> addkey
+Key is protected.
+You need a passphrase to unlock the secret key for
+user: "Alice"
+4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
+Enter passphrase: YourPassword
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+Your selection? 4
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 3072 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Fri 30 Nov 2018 10:44:21 PM CET
+Is this correct? (y/N) Y
+Really create? (y/N) Y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+............+++++
++++++
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
+                               trust: ultimate      validity: ultimate
+sub  3072R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+[ultimate] (1). Alice
+gpg> 
+```
+
+### Підключ для шифрування
+Тепер можна створити підключ для шифрування таким же чином як раніше ми створювали підключ для підпису. Просто вибираємо тип ключа `RSA (лише шифрування)`. 
+```bash
+gpg> addkey
+Key is protected.
+You need a passphrase to unlock the secret key for
+user: "Alice <alice@example.com>"
+4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
+Enter passphrase: YourPassword
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+Your selection? 6
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Fri 30 Nov 2018 10:44:23 PM CET
+Is this correct? (y/N) Y
+Really create? (y/N) Y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+.......+++++
+....................+++++
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
+                               trust: ultimate      validity: ultimate
+sub  3072R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  3072R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
+[ultimate] (1). Alice
+gpg> 
+```
+
+### Підключ автентифікації
+
+Якщо для автентифікації ви плануєте використовувати ключ GnuPG, створюємо додатковий підключ автентифікації. Таким підключем  можна скористатися для автентифікації, наприклад, при підключенні через SSH.
+
+Тип (8) дозволяє налаштувати призначення ключа вручну. Список вище показує варіанти призначення підключ. За замовчуванням ключ здатний «Підписати» та «Шифрувати».
+Вимкніть призначення за замовчуванням, а потім вводьте відповідну літеру та ENTER, вибираючи одне призначення за іншим. Використовуйте перемикач «A», щоб увімкнути можливість автентифікації, і перейдіть до «Q» щоб завершити генерацію. 
+Щоб створити підключ автентифікації, потрібно вибрати тип «(8) RSA (встановити власні можливості)».
+
+```bash
+gpg> addkey
+Key is protected.
+You need a passphrase to unlock the secret key for
+user: "Alice"
+4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
+Enter passphrase: YourPassword
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+Your selection? 8
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: Sign Encrypt 
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+Your selection?
+Your selection? S
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: Encrypt 
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+Your selection? E
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: 
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+Your selection? A
+Possible actions for a RSA key: Sign Encrypt Authenticate 
+Current allowed actions: Authenticate 
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+Your selection? Q
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Fri 30 Nov 2018 10:44:26 PM CET
+Is this correct? (y/N) Y
+Really create? (y/N) Y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+..+++++
+.....+++++
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
+                               trust: ultimate      validity: ultimate
+sub  3072R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  3072R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
+sub  3072R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A   
+[ultimate] (1). Alice
+gpg> save
+```
+
+Як ми бачимо, головний ключ та підключі мають 4096 біт, але можна зробити 3 підключа різного розміру, щбо пізніше ми встановити їх на смарт-картку або Yubikey.
+
+## Додайте додаткову інформацію
+
+До ключа GnuPG можна додати більше інформації щоб його легше було упізнати. На кшалт додавання додаткової особи до ключа. Для цього ключ потрібно знову відкрити в режимі редагування. Тоді команда «adduid» використовується для додавання додаткової інформації. Саме тут ми додамо адресу пошти, якщо не зробили цього при генерації головного ключа. 
+
+```bash 
+$ gpg --homedir /%флешка%/.gnupg --expert --edit-key 0xD93D03C13478D580
+gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Secret key is available.
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
+                               trust: ultimate      validity: ultimate
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  4096R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
+sub  4096R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A   
+[ultimate] (1). Alice <alice@example.com>
+gpg> adduid
+Real name:
+Email address: alice@example.org
+Comment: 
+You selected this USER-ID:
+    "Alice"
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+You need a passphrase to unlock the secret key for
+user: "Alice <alice@example.com>"
+4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
+Enter passphrase: YourPassword
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
+                               trust: ultimate      validity: ultimate
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  4096R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
+sub  4096R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A   
+[ultimate] (1)  Alice
+[ unknown] (2). alice@example.org
+gpg> uid 1
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C
+                               trust: ultimate      validity: ultimate
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S
+sub  4096R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E
+sub  4096R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A
+[ultimate] (2)* alice@example.com
+[ultimate] (1).
+gpg> primary
+You need a passphrase to unlock the secret key for
+user: "Alice"
+4096-bit RSA key, ID 0xD93D03C13478D580, created 2016-11-30
+Enter passphrase: YourPassword
+pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C
+                               trust: ultimate      validity: ultimate
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S
+sub  4096R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E
+sub  4096R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A
+[ultimate] (2)* alice@example.com
+[ultimate] (1)  Alice
+gpg> save
+```
+
+Останній вихід після додавання ідентифікатора показує ключ із довірою «unknown», який зміниться на необмежений після збереження нового посвідчення за допомогою команди «save».
+
+Позначення "." показує головний ідентифікатор для цього ключа. Як показано вище, після додавання другої особи, доданий ідентифікатор вибирається як основний. Але ми визначили основний ідентифікатор вручну шляхом вибору потрібного посвідчення за допомогою команди «uid», а потім команди «primary», щоб встановити цю особистість як первинну. Якщо ми додавали тільки пошту, головним записом буде запис з ім'ям.
 
 ## Клієнти
 
