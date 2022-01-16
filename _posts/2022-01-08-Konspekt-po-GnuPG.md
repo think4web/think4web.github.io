@@ -558,14 +558,15 @@ gpg:   secret keys imported: 1
 ## Перевірте зв'язку для щоденного використання
 
 Щоб переконатися, що тільки секретні ключі підключів було імпортовано назад у кільце ключів, виконайте таку команду. Ця команда покаже список усіх секретних ключів. Головний ключ позначений символом хеша «#», що вказує на те, що секретний ключ відсутній – як і очікувалося.
+
 ```bash
 $ gpg --homedir ~/.gnupg -K
 ~/.gnupg/secring.gpg
 ------------------------
 sec#  4096R/0xD93D03C13478D580 2016-11-30 [expires: 2018-11-30]
       Key fingerprint = F8C8 1342 2A7F 7A3A 9027  E158 D93D 03C1 3478 D580
-uid                            Alice <alice@example.com>
-uid                            Alice <alice@example.org>
+uid                            Alice
+uid                            alice@example.org
 ssb   4096R/0x1ED73636975EC6DE 2016-11-30
       Key fingerprint = 292D 3E78 6B2E DBEA 1D10  02C8 1ED7 3636 975E C6DE
 ssb   4096R/0x76737ABEB92745D7 2016-11-30
