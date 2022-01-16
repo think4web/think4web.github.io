@@ -10,7 +10,9 @@ published: true
 - [pleroma](https://social.net.ua/think4web)
 - [mail](mailto:efxice9c@anonaddy.me)
 
-```bash
+<details>
+  <summary>PGP key</summary>
+ ```bash
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHjrAIBEADCga9GHfzPltzISpHUYLsapEJKTqFMpcGgc3kFzU07RROReqB/
@@ -52,4 +54,7 @@ gQ/r5WGwJzkqkQZkdo0CJuFZkxrwPJw+xQNl0hDwmiU5Gotz2JtnkB8Q6HDZ2SS/
 MITMlCoTN1jMhijciDqatD0sydfydMI=
 =hrIV
 -----END PGP PUBLIC KEY BLOCK-----
-```
+```   
+</details>
+
+
