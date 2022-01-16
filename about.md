@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Контакти
 permalink: /about/
 published: true
 ---
