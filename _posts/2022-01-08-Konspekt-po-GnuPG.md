@@ -256,7 +256,7 @@ Please select what kind of key you want:
 Your selection? 4
 RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (2048) 4096
-Requested keysize is 3072 bits
+Requested keysize is 4096 bits
 Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
@@ -275,7 +275,7 @@ generator a better chance to gain enough entropy.
 +++++
 pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
                                trust: ultimate      validity: ultimate
-sub  3072R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
 [ultimate] (1). Alice
 gpg> 
 ```
@@ -318,8 +318,8 @@ generator a better chance to gain enough entropy.
 ....................+++++
 pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
                                trust: ultimate      validity: ultimate
-sub  3072R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
-sub  3072R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  4096R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
 [ultimate] (1). Alice
 gpg> 
 ```
@@ -397,9 +397,9 @@ generator a better chance to gain enough entropy.
 .....+++++
 pub  4096R/0xD93D03C13478D580  created: 2016-11-30  expires: 2018-11-30  usage: C   
                                trust: ultimate      validity: ultimate
-sub  3072R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
-sub  3072R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
-sub  3072R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A   
+sub  4096R/0x1ED73636975EC6DE  created: 2016-11-30  expires: 2018-11-30  usage: S   
+sub  4096R/0x76737ABEB92745D7  created: 2016-11-30  expires: 2018-11-30  usage: E   
+sub  4096R/0xE379FB0D81B6925D  created: 2016-11-30  expires: 2018-11-30  usage: A   
 [ultimate] (1). Alice
 gpg> save
 ```
@@ -466,6 +466,115 @@ gpg> save
 Останній вихід після додавання ідентифікатора показує ключ із довірою «unknown», який зміниться на необмежений після збереження нового посвідчення за допомогою команди «save».
 
 Позначення "." показує головний ідентифікатор для цього ключа. Як показано вище, після додавання другої особи, доданий ідентифікатор вибирається як основний. Але ми визначили основний ідентифікатор вручну шляхом вибору потрібного посвідчення за допомогою команди «uid», а потім команди «primary», щоб встановити цю особистість як первинну. Якщо ми додавали тільки пошту, головним записом буде запис з ім'ям.
+
+## Експортуємо резервну копію публічного та секретного ключів
+
+Щоб створити резервну копію ключів, експортуйте їх у файл. Експорт ключів виконується в два етапи, приватні ключі та секретні ключі експортуються окремо. 
+
+```bash
+$ gpg --homedir /%флешка%/.gnupg --export-secret-keys --armor --output ~/.gnupg/secret-keys.gpg 0xD93D03C13478D580
+$ gpg --homedir /%флешка%/.gnupg --export --armor --output ~/.gnupg/public-keys.gpg 0xD93D03C13478D580
+```
+
+За допомогою першої команди всі секретні ключі (головні + підключі) експортуються в один файл. Друга команда експортує всі публічні ключі (головні + підключі) в інший файл. Ці файли можна використовувати для резервного копіювання створених ключів зберігши їх на окремий носій.
+
+Щоб експортувати лише один конкретний підключ, ідентифікатор підключа можна вказати за допомогою «!» Знак оклику в кінці ID ключа вказує gpg експортувати лише цей конкретний підключ. Це доцільно зробити для підключів які будуть використовуватись на окремих пристроях. 
+
+```bash
+$ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output ~/.gnupg/secret-subkeys/0x1ED73636975EC6DE.asc 0x1ED73636975EC6DE!
+$ gpg --homedir /%флешка%/.gnupg --export --armor --output ~/.gnupg/public-keys/0xD93D03C13478D580.asc 0xD93D03C13478D580!
+```
+
+Наведена вище команда експортує лише секретний ключ підключа для підпису. Довідкова сторінка gpg описує знак оклику в ідентифікаторі ключа так.
+
+"Під час використання gpg знак оклику (!) може бути доданий, щоб примусово використовувати вказаний первинний або вторинний ключ, а не намагатися обчислити, який первинний або вторинний ключ використовувати." 
+
+## Зв'язка ключів для щоденного використання
+
+Для щоденного використання необхідно «вилучити» головний секретний ключ зі зв'язки щоб ризикувати ним. Таку зв'язку можна підготувати кількома шляхами.
+
+### Варіант 1. Видалення секретного головного ключа
+
+Експортуємо лише секретні підключі, видаляємо всі секретні частини ключів цього ключа з комплекту ключів (що включає не тільки головний ключ, але й підключі), а потім повторно імпортуючи лише секретні підключів залишаючи зв'язку без секретної частини головного ключа. 
+
+```bash
+$ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output ~/.gnupg/secret-subkeys.gpg 0xD93D03C13478D580
+```
+
+Ця команда експортує всі секретні підключі заданого ідентифікатора ключа та збереже його у вказаному файлі. 
+GnuPG другої версії просить видаляти кожен секретний ключ/підключ. На цьому етапі можна прийняти операцію видалення головного ключа, але видалити підключі можна заборонити. Це призведе до повідомлення про помилку для операції видалення, про те що підключи не були видалені. Так можна видалити секретний головний ключ, але зберегти підключі, а отже, не буде потреби повторного імпорту секретних підключів.
+
+```bash
+$ gpg --homedir ~/.gnupg --delete-secret-keys 0xD93D03C13478D580
+gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+sec  4096R/0xD93D03C13478D580 2016-11-30 Alice <alice@example.org>
+Delete this key from the keyring? (y/N) Y
+This is a secret key! - really delete? (y/N) Y
+```
+
+Після виконання наведеної вище команди всі секретні головні ключі видаляються зі зв'язки. За допомогою наступної команди експортовані секретні підключі повторно імпортуються назад до зв'язки.
+
+```bash
+$ gpg --homedir /%флешка%/.gnupg --import ~/.gnupg/secret-subkeys.gpg
+gpg: key 0xD93D03C13478D580: secret key imported
+gpg: key 0xD93D03C13478D580: "Alice <alice@example.org>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg:       secret keys read: 1
+gpg:   secret keys imported: 1
+```
+
+### Варіант 2. Створення з резервної копії
+
+Якщо зв'язка ключів яку ви використовували для створення, не є тією зв'язкою яку ви збираєтеся використовувати щоденно, файли резервної копії, створені раніше, можна використовувати для створення щоденного зв'язки. Це найкращий метод, якщо ви створили ключ не на комп'ютері яким ви користуєтеся для повсякденних завдань, або створили ключ на USB-накопичувачеві чи тому подібному.
+
+```bash
+$ gpg --homedir /%флешка%/.gnupg --export-secret-subkeys --armor --output ~/.gnupg/secret-subkeys.gpg 0xD93D03C13478D580
+```
+
+Як і в першому варіанті, експорт лише з підключами має бути здійснений за допомогою команди вище. На додаток до наступних команд, я пропоную також скопіювати **gpg.conf**, який використовується в наборі ключів, щоб створити ключ для щоденного використання.
+
+```bash
+$ gpg --homedir ~/.gnupg --import %флешка%/public-keys.gpg
+gpg: key 0xD93D03C13478D580: public key "Alice <alice@example.org>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+```
+
+Наведену вище команду можна використовувати для імпорту публічного ключа до зв'язки, яку ви використовуєте щоденно. За допомогою наведеної нижче команди секретні підключі без головного секретного ключа можна імпортувати до щоденного використання ключів. «–homedir ~/.gnupg» можна опустити, якщо зв'язка знаходиться за замовчуванням, як у цьому прикладі. 
+
+```bash
+$ gpg --homedir ~/.gnupg --import %флешка%/secret-subkeys.gpg
+gpg: key 0xD93D03C13478D580: secret key imported
+gpg: key 0xD93D03C13478D580: "Alice <alice@example.org>" 1 new signature
+gpg: Total number processed: 1
+gpg:         new signatures: 1
+gpg:       secret keys read: 1
+gpg:   secret keys imported: 1
+```
+
+## Перевірте зв'язку для щоденного використання
+
+Щоб переконатися, що тільки секретні ключі підключів було імпортовано назад у кільце ключів, виконайте таку команду. Ця команда покаже список усіх секретних ключів. Головний ключ позначений символом хеша «#», що вказує на те, що секретний ключ відсутній – як і очікувалося.
+```bash
+$ gpg --homedir ~/.gnupg -K
+~/.gnupg/secring.gpg
+------------------------
+sec#  4096R/0xD93D03C13478D580 2016-11-30 [expires: 2018-11-30]
+      Key fingerprint = F8C8 1342 2A7F 7A3A 9027  E158 D93D 03C1 3478 D580
+uid                            Alice <alice@example.com>
+uid                            Alice <alice@example.org>
+ssb   4096R/0x1ED73636975EC6DE 2016-11-30
+      Key fingerprint = 292D 3E78 6B2E DBEA 1D10  02C8 1ED7 3636 975E C6DE
+ssb   4096R/0x76737ABEB92745D7 2016-11-30
+      Key fingerprint = 0C33 42E5 670A B099 8ED7  3E87 7673 7ABE B927 45D7
+ssb   4096R/0xE379FB0D81B6925D 2016-11-30
+      Key fingerprint = 7357 2158 947D BAFF A89F  4911 E379 FB0D 81B6 925D
+```
+
+Нарешті, зберігайте резервну копію секретних ключів, зокрема секретного головного ключа, і видаліть будь-який інший тимчасовий файл експорту секретних підключів, який більше не потрібен. Розгляньте можливість використання утиліти [shred](https://linux.die.net/man/1/shred), щоб безпечно видалити ці файли. 
 
 ## Клієнти
 
