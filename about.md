@@ -12,7 +12,6 @@ published: true
 
 <details>
   <summary>PGP key</summary>
-```bash
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHjrAIBEADCga9GHfzPltzISpHUYLsapEJKTqFMpcGgc3kFzU07RROReqB/
@@ -53,8 +52,7 @@ pJDEvno/vXCsc2oarQBQ5BeDPrFzXpIf7EPsyM5uB1vTpUWtbm4SezxKfP+3pvtc
 gQ/r5WGwJzkqkQZkdo0CJuFZkxrwPJw+xQNl0hDwmiU5Gotz2JtnkB8Q6HDZ2SS/
 MITMlCoTN1jMhijciDqatD0sydfydMI=
 =hrIV
------END PGP PUBLIC KEY BLOCK-----
-```   
+-----END PGP PUBLIC KEY BLOCK-----   
 </details>
 
 
