@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Конспект по GnuPG 
 author: think4web
