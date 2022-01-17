@@ -12,8 +12,10 @@ tags: gpg
 ```bash
 git config --global user.signingkey %KeyID%
 git config --global commit.gpgsign true
-git config --global gpg.program $(which gpg2)
+git config --global gpg.program /usr/local/bin/gpg
 ```
+
+У файл конфігурації ```~/.gnupg/gpg.conf``` необхідно додати опцію ```no-tty```.
 
 Після чого треба зайти у налаштування профілю на GitHub і додати свій GPG-ключ.
 
