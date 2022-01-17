@@ -57,11 +57,11 @@ tags: gpg
 
 Для використання у скриптах у GPG є хороше API, що активується наступними опціями:
 
-```--with-colons```
+--with-colons
 
-```--status-fd```
+--status-fd
 
-```--command-fd```
+--command-fd
 
 ## Публікація ключив
 
