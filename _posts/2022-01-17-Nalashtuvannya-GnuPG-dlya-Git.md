@@ -60,4 +60,5 @@ git config --global gpg.program /usr/local/bin/gpg
 git commit -S -m '%текст_коміту%'
 ```
 
+
 При створенні нового коміту він буде підписаний за допомогою GPG-ключа і біля комітів з'явиться позначка **Verified**.
