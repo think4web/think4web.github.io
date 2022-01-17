@@ -69,11 +69,23 @@ tags: gpg
 
 Адресу серверу ключів можна додати у ```gpg.conf``` у рядку ```keyserver %URL%```.
 
-```gpg --keyserver %URL% --send-keys %KeyID%``` - відправити публічний ключ на сервер;
+Відправити публічний ключ **%KeyID** на сервер:
 
-```gpg --keyserver %URL% --recv-keys %KeyID%``` - отримати публічний ключ з серверу;
+```bash
+gpg --keyserver %URL% --send-keys %KeyID%
+```
 
-```gpg --keyserver %URL% --refresh-keys``` - оновити інформацію про ключ з серверу;
+Отримати публічний ключ **%KeyID** з серверу:
+
+```bash
+gpg --keyserver %URL% --recv-keys %KeyID%
+```
+
+Оновити інформацію про ключі з серверу:
+
+```bash
+gpg --keyserver %URL% --refresh-keys
+```
 
 ## Відкликання ключів
 
@@ -88,6 +100,8 @@ gpg -a --gen-revoke %KeyID% > %KeyID%.rev
 ```bash
 gpg --import %KeyID%.rev
 ```
+
+Після цього залишається опублікувати ключі на сервері.
 
 ## Підписання ключів
 
