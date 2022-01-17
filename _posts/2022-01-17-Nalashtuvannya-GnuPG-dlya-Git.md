@@ -21,6 +21,32 @@ git config --global user.signingkey %KeyID%
 git config --local user.signingkey %KeyID%
 ```
 
+## Додавання налаштувань вручну
+
+Додати у файл ```.gitconfig``` опцію ```signingkey```.
+
+Для глобального налаштування:
+
+```bash
+[user]
+	name = %User Name%
+	email = %test@test.com%
+	signingkey = %KeyID%
+[commit]
+	gpgsign = true
+[core]
+	autocrlf = input
+```
+
+Для локального налаштування використовується перемінна ```signingkey```, що знаходиться у файлі ```.git/config``` репозиторію.
+
+```bash
+[user]
+	name = %User Name%
+	email = %test@test.com%
+    signingkey = %KeyID%
+```
+
 ```bash
 git config --global commit.gpgsign true
 git config --global gpg.program /usr/local/bin/gpg
