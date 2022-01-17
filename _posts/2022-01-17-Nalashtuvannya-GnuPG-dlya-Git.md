@@ -9,8 +9,19 @@ tags: gpg
 
 ## Налаштування автоматичного підписання комітів
 
+Додає ключ для підписання усіх репозиторіїв:
+
 ```bash
 git config --global user.signingkey %KeyID%
+```
+
+Додати ключ для підписання локального репозиторію:
+
+```bash
+git config --local user.signingkey %KeyID%
+```
+
+```bash
 git config --global commit.gpgsign true
 git config --global gpg.program /usr/local/bin/gpg
 ```
