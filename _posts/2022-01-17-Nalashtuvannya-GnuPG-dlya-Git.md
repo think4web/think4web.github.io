@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Налаштування GnuPG для Git
 author: think4web
@@ -18,5 +18,3 @@ git config --global gpg.program $(which gpg2)
 Після чого треба зайти у налаштування профілю на GitHub і додати свій GPG-ключ.
 
 При створенні нового коміту він буде підписаний за допомогою GPG-ключа і біля комітів з'явиться позначка **Verified**.
-
-https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
