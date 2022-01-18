@@ -48,7 +48,6 @@ git config --local user.signingkey %KeyID%
 ```
 
 
-
 ```bash
 git config --global commit.gpgsign true
 git config --global gpg.program /usr/local/bin/gpg
