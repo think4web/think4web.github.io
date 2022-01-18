@@ -43,7 +43,7 @@ git config --local user.signingkey %KeyID%
 ```bash
 [user]
 	name = %User Name%
-	email = %test@test.com% # вказати email який використовується у ключі та доданий на GitHub
+	email = %test@test.com%
     signingkey = %KeyID%
 ```
 
