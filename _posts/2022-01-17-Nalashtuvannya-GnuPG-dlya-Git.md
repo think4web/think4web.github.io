@@ -61,5 +61,10 @@ git config --global gpg.program /usr/local/bin/gpg
 ```bash
 git commit -S -m '%текст_коміту%'
 ```
+Перевірка підпису:
+
+```bash
+git log --show-signature -1
+```
 
 При створенні нового коміту він буде підписаний за допомогою GPG-ключа і біля комітів з'явиться позначка **Verified**.
