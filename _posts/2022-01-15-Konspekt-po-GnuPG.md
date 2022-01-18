@@ -195,6 +195,12 @@ gpg -d test.txt.gpg > test.txt
 cat test.txt.gpg | gpg -d
 ```
 
+## Подивитись інформацію про отримувача без розшифрування
+
+```bash
+gpg --list-only -d test.txt.gpg
+```
+
 ## Помилки
 
 
