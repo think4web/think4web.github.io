@@ -197,8 +197,26 @@ cat test.txt.gpg | gpg -d
 
 ## Подивитись інформацію про отримувача без розшифрування
 
+Показати інформацію про отримувача файлу не розшифровуючи файл:
+
 ```bash
 gpg --list-only -d test.txt.gpg
+```
+
+У випадку асиметричного шифрування для отримувача **User Name** з ключем **KeyID**:
+
+```bash
+gpg: encrypted with 2048-bit RSA key, ID %KeyID%, created 2020-02-22
+      "User Name"
+```
+
+У випадку симетричного шифрування для користувача **User Name** з ключем **KeyID**:
+
+```bash
+gpg: AES encrypted session key
+gpg: encrypted with 1 passphrase
+gpg: encrypted with 2048-bit RSA key, ID %KeyID%, created 2020-02-22
+      "User Name"
 ```
 
 ## Помилки
