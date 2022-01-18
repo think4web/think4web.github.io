@@ -52,6 +52,9 @@ git config --local user.signingkey %KeyID%
 ```bash
 git config --global commit.gpgsign true
 ```
+
+Якщо цього не зробити то необхідно використовувати опцію "-S" у комітах.
+
 Вказуємо де знаходиться gpg, дізнатись це можна командою ```which gpg```:
 
 ```bash
