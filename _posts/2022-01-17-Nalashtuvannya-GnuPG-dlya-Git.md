@@ -47,9 +47,14 @@ git config --local user.signingkey %KeyID%
     signingkey = %KeyID%
 ```
 
+Ввімкнути обов'язковий підпис для усіх комітів:
 
 ```bash
 git config --global commit.gpgsign true
+```
+Вказуємо де знаходиться gpg, дізнатись це можна командою ```which gpg```:
+
+```bash
 git config --global gpg.program /usr/local/bin/gpg
 ```
 
