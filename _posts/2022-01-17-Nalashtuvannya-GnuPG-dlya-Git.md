@@ -3,71 +3,63 @@ published: true
 layout: post
 title: Налаштування GnuPG для Git
 author: think4web
-discription:
-tags: gpg
+discription: Як налаштувати підпис комітів у GitHub своїм GPG-ключем. 
+tags: gpg github
 ---
 
 ## Налаштування автоматичного підписання комітів
 
-Додає ключ для підписання усіх репозиторіїв:
+Для локальних налаштувань використати опцію ```--local```, для глобальних - опцію ```--global```
+
+Глобально додати ключ для підписання у репозиторію:
 
 ```bash
 git config --global user.signingkey %KeyID%
 ```
 
-Додати ключ для підписання локального репозиторію:
+Глобально ввімкнути обов'язковий підпис для усіх комітів:
 
 ```bash
-git config --local user.signingkey %KeyID%
+git config --global commit.gpgsign true
 ```
 
-## Додавання налаштувань вручну
+Глобально вказати де знаходиться GPG, дізнатись це можна командою ```which gpg```:
 
-Додати у файл ```.gitconfig``` опцію ```signingkey```.
+```bash
+git config --global gpg.program /usr/local/bin/gpg
+```
 
-Для глобального налаштування:
+## Файли конфігурації
+
+Глобальний файл конфігурації git знаходиться за адресою ```~/.gitconfig```.
+
+Локальний файл конфігурації git знаходиться за адресою ```git/comfig``` у самому репозиторії.
+
+У файл конфігурації треба додати перемінну **signingkey**:
 
 ```bash
 [user]
-	name = %User Name%
-	email = %test@test.com%
-	signingkey = %KeyID%
+  name = %User Name%
+  email = %user@email.com%
+ signingkey = %KeyID%
 [commit]
 	gpgsign = true
 [core]
 	autocrlf = input
 ```
 
-Для локального налаштування використовується перемінна ```signingkey```, що знаходиться у файлі ```.git/config``` репозиторію.
+## Налаштування GitHub
 
-```bash
-[user]
-	name = %User Name%
-	email = %test@test.com%
-    signingkey = %KeyID%
-```
+У налаштування профілю на GitHub додати публічний GPG-ключ для підпису. У ідентифікаторах ключа (**uid**) має бути вказана та сама пошта що вказана в GitHub у якості публічної пошти.
 
-Ввімкнути обов'язковий підпис для усіх комітів:
+## Підписання коментарів вручну
 
-```bash
-git config --global commit.gpgsign true
-```
-
-Якщо цього не зробити то необхідно використовувати опцію "-S" у комітах.
-
-Вказуємо де знаходиться gpg, дізнатись це можна командою ```which gpg```:
-
-```bash
-git config --global gpg.program /usr/local/bin/gpg
-```
-
-У файл конфігурації ```~/.gnupg/gpg.conf``` необхідно додати опцію ```no-tty```. Після чого треба зайти у налаштування профілю на GitHub і додати свій публічний GPG-ключ.
-
-Для підписання комітів необхідно вводити:
+Для примусового підписання комітів необхідно вводити ключ **-S**:
 
 ```bash
 git commit -S -m '%текст_коміту%'
 ```
+
 Перевірка підпису:
 
 ```bash
