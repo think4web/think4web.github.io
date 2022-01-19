@@ -5,6 +5,9 @@ permalink: /about/
 published: true
 ---
 
+think4web - віртуальна тінь, що не існує за межами інтернет-мережі. Цей блог є лише спробою систематизації окремих нотаток, записів, перекладів зроблених, у першу чергу, для себе. Тому пости можуть доповнюватися, змінюватися, переписуватись повністю.
+
+Зв'язатися:
 - [matrix](https://matrix.to/#/@jwtzbtlceh:here.in.ua)
 - [pleroma](https://social.net.ua/think4web)
 - [mail](mailto:efxice9c@anonaddy.me)
