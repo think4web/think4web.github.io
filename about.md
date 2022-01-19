@@ -11,8 +11,7 @@ published: true
 
 <details>
   <summary>PGP key</summary>
-<pre>
-```bash
+<pre><code>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGHjrAIBEADCga9GHfzPltzISpHUYLsapEJKTqFMpcGgc3kFzU07RROReqB/
@@ -55,7 +54,7 @@ MITMlCoTN1jMhijciDqatD0sydfydMI=
 =hrIV
 -----END PGP PUBLIC KEY BLOCK-----  
 ```
-</pre>
+</code></pre>
 </details>
 
 
