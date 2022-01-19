@@ -9,7 +9,7 @@ think4web - віртуальна тінь, що не існує за межам�
 
 Зв'язатися:
 - [matrix](https://matrix.to/#/@jwtzbtlceh:here.in.ua)
-- [pleroma](https://social.net.ua/think4web)
+- [pleroma](https://social.net.ua/@think4web)
 - [mail](mailto:efxice9c@anonaddy.me)
 
 <details>
