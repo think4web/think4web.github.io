@@ -4,7 +4,7 @@ layout: post
 title: Налаштування GnuPG для Git
 author: think4web
 discription: Як налаштувати підпис комітів у GitHub своїм GPG-ключем. 
-tags: gpg github
+tags: gpg git github
 ---
 
 ## Налаштування автоматичного підписання комітів
