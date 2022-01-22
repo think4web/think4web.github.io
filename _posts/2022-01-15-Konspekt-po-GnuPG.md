@@ -385,6 +385,73 @@ gpg --gen-revoke %KeyID%
 
 Після чого ключ треба імпортувати у зв'язку та опублікувати не сервері.
 
+## Довіра до ключів
+
+Ви можете довіряти ключам свого співрозмовника, але не бути упевненим у том що він належним чином перевіряє ключі своїх співрозмовників, які підписує. Тому можна вказати рівень довіри до кожного ключа у зв'язці:
+- **unknown** (невідомо)- нічого не відомо про політику підписання ключів власника ключа. Усім ключам у зв'язці крів власного за замовчуванням призначається цей рівень довіри;
+- **none** (немає) - відомо про недбалість власника цього ключа при підписанні чужих ключів; 
+- **marginal** (граничне) - власника ключа розуміє значення підписання ключів та перевіряє їх достовірність перед тим як підписати;
+- **full** (повне) - власник ключа дуже розбірливий у підписанні ключів і його підпису на ключі можна вірити як своєму власному.
+
+Рівень довіри до ключа є вашою приватною інформацією, не експортується разом з ключем і зберігається окремо в спеціальній базі. 
+
+Для прискоєння певного рівня довіри ключу:
+
+```bash
+
+gpg --edit-key %KeyID%
+
+pub  1024D/8B927C8A  created: 1999-07-02 expires: never      trust: q/f
+sub  1024g/C19EA233  created: 1999-07-02 expires: never     
+(1)  User Name (Executioner) <test@test.com>
+
+Command> trust
+pub  1024D/8B927C8A  created: 1999-07-02 expires: never      trust: q/f
+sub  1024g/C19EA233  created: 1999-07-02 expires: never     
+(1)  User Name (Executioner) <test@test.com>
+
+Please decide how far you trust this user to correctly
+verify other users' keys (by looking at passports,
+checking fingerprints from different sources...)?
+
+ 1 = Don't know
+ 2 = I do NOT trust
+ 3 = I trust marginally
+ 4 = I trust fully
+ s = please show me more information
+ m = back to the main menu
+
+Your decision? 3
+                
+pub  1024D/8B927C8A  created: 1999-07-02 expires: never      trust: m/f
+sub  1024g/C19EA233  created: 1999-07-02 expires: never     
+(1)  User Name (Executioner) <test@test.com>
+
+Command> quit
+
+### Підписати ключі
+
+Щоб підписати ключі інших користувачів:
+
+```bash
+gpg --sign-key user-id
+```
+
+Перевірити підписані ключі:
+
+```bash
+gpg --list-sigs
+```
+
+Інформацією про підписані ключи```trustdb.gpg```. Після підписання ключів необхідно скопіювати файл до папки зі зв'язкою ключів для повсякденного використання.
+
+## Сертифікація ключів
+
+- (generic certification)
+- (persona certification)
+- (casual certification)
+- (positive certification)
+
 ## Помилки
 
 ### Неможливо ввести пароль після помилки
