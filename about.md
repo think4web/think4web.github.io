@@ -12,8 +12,6 @@ think4web - віртуальна тінь, що не існує за межам�
 - [pleroma](https://social.net.ua/think4web)
 - [mail](mailto:efxice9c@anonaddy.me)
 
-![Cypherpunks UA](https://img.shields.io/matrix/cpunks:matrix.org?label=Cypherpunks%20UA&style=plastic)
-
 <details>
   <summary>PGP key</summary>
 <pre><code>
