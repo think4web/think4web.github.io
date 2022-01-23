@@ -7,11 +7,11 @@ discription:
 tags: softwate security gocryptfs
 ---
 
-[gocryptfs](https://github.com/rfjakob/gocryptfs) - програма для шифрування файлів для хмарних сервісів. Заміна [CryFS](/CryFS/).
+[gocryptfs](https://github.com/rfjakob/gocryptfs) - програма для шифрування файлів для хмарних сервісів. Заміна [CryFS](/CryFS/) бо має менше вразливостей.
 
 ## Встановлення gocryptfs
 
-```libpam-mount``` - дозволяє автоматично монтувати розділ при вході у систему. Також можна для зручності поставити GUI ```sirikali``` для роботи з шифрованих папок.
+```libpam-mount``` - дозволяє автоматично монтувати розділ при вході у систему. Також можна для зручності поставити GUI ```sirikali``` для роботи з шифрованими директоріями.
 
 ```bash
 sudo apt install gocryptfs libpam-mount
