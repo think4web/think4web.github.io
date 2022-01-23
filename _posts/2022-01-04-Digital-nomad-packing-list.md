@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Набір речей для виживання у міських умовах
+title: Набір речей для виживання у місті
 author: think4web
 discription: Список необхідних речей без яких важко виживати у міських умовах.
 tags: edc 
