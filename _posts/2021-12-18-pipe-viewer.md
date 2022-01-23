@@ -1,10 +1,10 @@
 ---
 published: true
 layout: post
-title: pipe-viewer
+title: pipe-viewer - відтворення відео з YouTube
 author: think4web
 discription: Встановлення і налаштування pipe-viewer.
-tags: software
+tags: software youtube pipe-verwer
 ---
 
 [pipe-viewer](https://github.com/trizen/pipe-viewer) - це легка та багатофункціональна програма для відео з YouTube.
