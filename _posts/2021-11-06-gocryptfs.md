@@ -14,7 +14,6 @@ tags: softwate security gocryptfs
 ```libpam-mount``` - дозволяє автоматично монтувати розділ при вході у систему. Також можна для зручності поставити GUI ```sirikali``` для роботи з шифрованих папок.
 
 ```bash
-
 sudo apt install gocryptfs libpam-mount
 ``` 
 
