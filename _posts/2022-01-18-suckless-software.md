@@ -4,7 +4,7 @@ layout: post
 title: Набір мінімалістичних програм що працюють у терміналі
 author: think4web
 discription:
-tags: suckless
+tags: software minimalism
 ---
 
 - [Vim](/tag/vim/)
