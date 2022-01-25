@@ -4,9 +4,15 @@ layout: post
 title: Конспект по Vim
 author: think4web
 discription: Команди Vim щоб їх не забути.
-tags: vim
+tags: vim neovim firefox
 ---
- 
+
+[Vim](https://www.vim.org/) - мінімалиістичний і недружній до користувача редктор коду, що має високий поріг входу але дає дуже великий приріст продуктивності. Є форк [Neovim](https://neovim.io/) зі своїми відмінностями. Більшість плагінів однаково підходять для Vim та Neovim. Зараз відмінність Neovim у сучасному дизайні. 
+
+Можна використовувати vim-управління у браузері за допомогою розширень.
+
+## Управління
+
 Переміщення:
 - **0** - переміщення у початок рядка
 - **$** - переміщення у кінець рядка
@@ -37,13 +43,19 @@ tags: vim
 
 Для встановлення плагенів потрібен менеджер. Потім у .vimrc додати у блок з благінами назву плагіну. Потім ввести команду :source .vimrc щоб перечитати конфігурацію Vim. Далі ввести :PlugInstall
 
-Плагіни
-- [vim-plug](https://github.com/preservim/vim-lexical) - перевірка правипису
+Плагіни:
+- [vim-plug](https://github.com/preservim/vim-lexical) - перевірка правипису.
 
+## Інтеграції з іншими програмами
 
+Додатки та плагіни для роботи у програмах у стилі Vim:
+- [Vimium-FF](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/) - додаток для Firefox;
+- 
 
-https://linuxhint.com/vim_spell_check/ - налаштування перевірки правопису
-https://github.com/preservim/vim-lexical - плагін
+Посилання:
+- [Vim Tips Wiki](https://vim.fandom.com/wiki/Vim_Tips_Wiki) - ресурс з інформацією по Vim;
+- [Вікіпідручник](https://uk.wikibooks.org/wiki/Vim).
 
-https://github.com/dpelle/vim-LanguageTool - плагін для перевірки орфографії
-https://www.youtube.com/watch?v=ez1XBUqbS68 - Vim's built-in Spell-Checker, Corrections and Multilingual Dictionaries!
+Джерела:
+За матеріалами [Як почати користуватись Vim](https://codeguida.com/post/2253)
+
