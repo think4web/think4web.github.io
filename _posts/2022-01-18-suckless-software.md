@@ -4,7 +4,7 @@ layout: post
 title: Набір мінімалістичних програм що працюють у терміналі
 author: think4web
 discription:
-tags: software minimalism
+tags: software minimalism vim ranger nnn ncmpcpp
 ---
 
 - [Vim](/tag/vim/)
