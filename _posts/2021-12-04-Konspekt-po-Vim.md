@@ -4,7 +4,7 @@ layout: post
 title: Конспект по Vim
 author: think4web
 discription: Команди Vim щоб їх не забути.
-tags: vim neovim firefox
+tags: vim neovim firefox vimium
 ---
 
 [Vim](https://www.vim.org/) - мінімалістичний і недружній до користувача редактор коду, що має високий поріг входу але дає дуже великий приріст продуктивності. Є форк [Neovim](https://neovim.io/) основною відмітністю якого є сучасний дизайн. Більшість плагінів однаково підходять для Vim та Neovim. 
@@ -107,7 +107,7 @@ Vim дозволяє згортати блоки тексту в один ряд
 ## Інтеграції з іншими програмами
 
 Додатки та плагіни для роботи у програмах у стилі Vim:
-- [Vimium-FF](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/) - додаток для Firefox;
+- [Vimium](https://github.com/philc/vimium) - додаток для браузеру.
 
 Посилання:
 - [Vim Tips Wiki](https://vim.fandom.com/wiki/Vim_Tips_Wiki) - ресурс з інформацією по Vim;
